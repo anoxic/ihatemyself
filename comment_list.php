@@ -7,7 +7,7 @@ $comments = r()->lrange("comments:$bucket", 0, 99);
 $prefix = comment_path();
 ?>
 <link rel=stylesheet href=/cee_ess_ess>
-<title>Comments</title> <sy><?=$bucket?></sy>
+<title>comments</title> <sy><?=$bucket?></sy>
 <div wrap>
 <?php
 if (!$comments) {

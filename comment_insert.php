@@ -61,35 +61,26 @@ $data = [
 r()->setex("xsrf:$data[xsrf]", 60*60*2, json_encode($data));
 r()->setex("xsrf_block:$data[xsrf]", 15, 1);
 ?>
-<title>insert comment</title>
+<link rel=stylesheet href=/cee_ess_ess>
 <style>
-a              { color: #710f26 }
-tag,date,sy    { color: #b1a3a3 }
-co             { color: #557ec1 }
-*              { color: #433838; font: 1em/3.2ex monospace; padding: 0 }
-body           { margin: 3ex 3ex 7ex; width: 77ex }
-em             { font-weight: bold }
-input,textarea { display: block; width: 75ex }
+input,textarea { width: 100% }
+[type=submit]  { margin: 3ex 0 5ex }
 textarea       { min-height: 22ex }
-[type=submit]  { margin: 3ex 0 0 }
-input:not([type=submit]), textarea { border: 1px solid #b1a3a3; box-sizing: border-box; height: 4.7ex; padding: 1.2ex 1.4ex; transition: border .1s, padding .1s; }
-input:not([type=submit]):focus, textarea:focus { border-width: .6ex; border-color: #557ec1; outline: 0; padding: .9ex 1.1ex }
 </style>
+<title>insert comment</title> <sy><?=htmlspecialchars($bucket)?></sy>
 
-<h1><em>Insert Comment</em></h1>
-<h2><co><?=htmlspecialchars($bucket)?></co></h2>
-
-<p><co>if ya wanna make a comment, ya gotta follow the rules:</co></p>
-<p><co>email is required, but only so i can hunt ya down if ya say something i don' like. i won' publish it</co></p>
-<p><co>ya gotta spend more'n 30 seconds writing yer comment, if ya spend more'n an hour on it n' summit tha form, yer comment is gone ferever, sorry</co></p>
-<p><co>probably, ya c'n use these htmls: <em>a</em>,<em>em</em>,<em>strong</em>,<em>code</em></co></p>
+<div wrap commentf>
+<p>if ya wanna make a comment, ya gotta follow the rules:</p>
+<p>email is required, but only so i can hunt ya down if ya say something i don' like. i won' publish it</p>
+<p>ya gotta spend more'n 30 seconds writing yer comment, if ya spend more'n an hour on it n' summit tha form, yer comment is gone ferever, sorry</p>
+<p>probably, ya c'n use these htmls: <em>a</em>,<em>em</em>,<em>strong</em>,<em>code</em></p>
 
 <form method=post>
 <input name=xsrf value=<?=$data['xsrf']?> type=hidden>
-name <input name=<?=$data['name']?>>
-website (fer linkin') <input name=<?=$data['website']?>>
-webmail address <input name=<?=$data['email']?>>
-comment <textarea name=<?=$data['comment']?>></textarea>
+<label>name <input name=<?=$data['name']?>></label>
+<label>website (fer linkin') <input name=<?=$data['website']?>></label>
+<label>webmail address <input name=<?=$data['email']?>></label>
+<label>comment <textarea name=<?=$data['comment']?>></textarea></label>
 <input type=submit>
 <input type=hidden name=viewport>
 </form>
@@ -103,3 +94,5 @@ var w = window.innerWidth || 0
 var h = window.innerHeight || 0
 document.querySelector('[name="viewport"]').value = w + "," + h
 </script>
+
+</div>
