@@ -1,0 +1,4 @@
+{
+    "autoload": { "files": ["fun.php"] },
+    "require":  { "cheprasov/php-redis-client": "^1.9", "skyeng/php-lemmatizer": "^1.0" }
+}

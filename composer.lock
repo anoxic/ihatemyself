@@ -1,0 +1,100 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "309a910bcbbaab97d9b7b505f990a0ce",
+    "content-hash": "425fa7acaf12e33e01bca31de1629e9e",
+    "packages": [
+        {
+            "name": "cheprasov/php-redis-client",
+            "version": "1.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cheprasov/php-redis-client.git",
+                "reference": "b605615c256efa5ee3c8d750147f8d085eefaab7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cheprasov/php-redis-client/zipball/b605615c256efa5ee3c8d750147f8d085eefaab7",
+                "reference": "b605615c256efa5ee3c8d750147f8d085eefaab7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "cheprasov/php-extra-mocks": "^1.0.0",
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "RedisClient\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Cheprasov",
+                    "email": "acheprasov84@gmail.com"
+                }
+            ],
+            "description": "Php client for Redis. It is a fast, fully-functional and user-friendly client for Redis, optimized for performance. RedisClient supports the latest versions of Redis starting from 2.6 to 5.0",
+            "homepage": "http://github.com/cheprasov/php-redis-client",
+            "time": "2019-10-27 18:56:48"
+        },
+        {
+            "name": "skyeng/php-lemmatizer",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/skyeng/php-lemmatizer.git",
+                "reference": "9f5154a0de3c64e08c1a96be793b4eec236962cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/skyeng/php-lemmatizer/zipball/9f5154a0de3c64e08c1a96be793b4eec236962cb",
+                "reference": "9f5154a0de3c64e08c1a96be793b4eec236962cb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Skyeng\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP Lemmatizer is a lemmatization library to retrieve a base form from an English inflected word.",
+            "keywords": [
+                "english",
+                "lemmatization",
+                "lemmatizer",
+                "php",
+                "word"
+            ],
+            "time": "2017-06-27 06:51:55"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
