@@ -7,6 +7,10 @@ $comments = r()->lrange("comments:$bucket", 0, 99);
 $prefix = comment_path();
 ?>
 <link rel=stylesheet href=/cee_ess_ess>
+<style>
+[comment] { margin: 5ex 0 0 }
+author    { margin: 0 0 1.5ex; display: block }
+</style>
 <title>comments</title> <sy><?=$bucket?></sy>
 <div wrap>
 <?php

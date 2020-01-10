@@ -66,14 +66,17 @@ r()->setex("xsrf_block:$data[xsrf]", 15, 1);
 input,textarea { width: 100% }
 [type=submit]  { margin: 3ex 0 5ex }
 textarea       { min-height: 22ex }
+p              { margin: 0 0 3ex }
 </style>
-<title>insert comment</title> <sy><?=htmlspecialchars($bucket)?></sy>
+<title>insert comment</title> <?=htmlspecialchars($bucket)?>
 
 <div wrap commentf>
+<sy>
 <p>if ya wanna make a comment, ya gotta follow the rules:</p>
 <p>email is required, but only so i can hunt ya down if ya say something i don' like. i won' publish it</p>
 <p>ya gotta spend more'n 30 seconds writing yer comment, if ya spend more'n an hour on it n' summit tha form, yer comment is gone ferever, sorry</p>
 <p>probably, ya c'n use these htmls: <em>a</em>,<em>em</em>,<em>strong</em>,<em>code</em></p>
+</sy>
 
 <form method=post>
 <input name=xsrf value=<?=$data['xsrf']?> type=hidden>
