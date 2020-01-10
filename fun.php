@@ -1,7 +1,6 @@
 <?php
 function bucket($n)
 {
-    //$n = preg_replace('#/([^/]+)/([^/]*)/?#', '$1.$2', $n);
     $n = preg_replace('/[^A-Z0-9]+/', '_', strtoupper($n));
     $n = trim($n, "_");
     return $n;
