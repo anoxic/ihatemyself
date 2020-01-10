@@ -24,7 +24,7 @@ function num_comments($bucket)
 function comment_path()
 {
     $paths = explode(" ", config("comment"));
-    return $paths[rand(0,count($paths))];
+    return $paths[rand(0,count($paths)-1)];
 }
 
 function config($c)
