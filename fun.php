@@ -22,12 +22,13 @@ function num_comments($bucket)
     return r()->llen("comments:$bucket");
 }
 
-function comment_urls()
+function comment_path()
 {
-    return ['отзыв','소문','zauważyć','記す','付注'];
+    $paths = explode(" ", config("comment"));
+    return $paths[rand(0,count($paths))];
 }
 
 function config($c)
 {
-    return trim(file_get_contents(dirname(__FILE__) . "/conf/$c"));
+    return trim(file_get_contents(dirname(dirname(__FILE__)) . "/conf/$c"));
 }

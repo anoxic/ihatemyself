@@ -4,7 +4,7 @@ header('HTTP/1.1 200 OK');
 
 $bucket = bucket(substr($_SERVER{'REQUEST_URI'}, strlen('/comments/')));
 $comments = r()->lrange("comments:$bucket", 0, 99);
-$prefix = comment_urls()[rand(0,4)];
+$prefix = comment_path();
 ?>
 <title>comments</title>
 <style>
