@@ -1,3 +1,4 @@
+<meta name=viewport content="width=device-width,initial-scale=1.0"> 
 <link rel=stylesheet href=/cee_ess_ess>
 <title>posts from <?=$d=substr($_SERVER{'REQUEST_URI'},1,4)?></title>
 <pre>

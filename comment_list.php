@@ -6,6 +6,7 @@ $bucket = bucket(substr($_SERVER{'REQUEST_URI'}, strlen('/comments/')));
 $comments = r()->lrange("comments:$bucket", 0, 99);
 $prefix = comment_path();
 ?>
+<meta name=viewport content="width=device-width,initial-scale=1.0"> 
 <link rel=stylesheet href=/cee_ess_ess>
 <style>
 [comment] { margin: 5ex 0 0 }

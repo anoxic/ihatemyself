@@ -31,8 +31,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     err:
         header('HTTP/1.1 ' . ($code ?: '400 Bad Request'));
-        header('Content-Type: text/plain');
-        echo $err;
+
+        echo "<meta name=viewport content=\"width=device-width,initial-scale=1.0\">";
+        echo "<link rel=stylesheet href=/cee_ess_ess>";
+        echo "<title>$err</title>";
         r()->rpush("failed_comments", json_encode([
             'time'             => date(DATE_ATOM),
             'err'              => $err,
@@ -61,6 +63,7 @@ $data = [
 r()->setex("xsrf:$data[xsrf]", 60*60*2, json_encode($data));
 r()->setex("xsrf_block:$data[xsrf]", 15, 1);
 ?>
+<meta name=viewport content="width=device-width,initial-scale=1.0"> 
 <link rel=stylesheet href=/cee_ess_ess>
 <style>
 input,textarea { width: 100% }
